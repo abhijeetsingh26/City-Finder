@@ -104,6 +104,7 @@ public class MainApplication
 				System.out.print(sortedMap.put(entry.getKey(), entry.getValue()) + "  ");
 			}
 			System.out.println();
+			System.out.println();
 			System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------");
 			System.out.println();
 			System.out.println();
