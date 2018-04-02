@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
@@ -106,15 +107,23 @@ public class MainApplication
 			System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------");
 			System.out.println();
 			System.out.println();
+//			 Map.Entry<String,Integer> entry = sortedMap.entrySet().iterator().next();
+//			 Integer offset = entry.getValue();
+//			for(Entry<String,Integer> currentEntry:sortedMap.entrySet())
+//			{
+//				
+//				currentEntry.setValue( (currentEntry.getValue()-offset));
+//			}
 			System.out.println("RESULT (UNIQUE & ORDERED):-" + sortedMap);
 			Long endTime = System.currentTimeMillis();
-			System.out.println("TOTAL TIME (in seconds):  " + ((double) ((Long) (endTime - startTime) / 1000)));
+			System.out.println("TOTAL TIME (in seconds):  " +   ((endTime - startTime) / 1000.000)   );
 		} catch (
 
 		Exception e) {
 			e.printStackTrace();
 		}
 	}
+	
 
 	private static ArrayList<String> getLatLongFromJSONObject(JSONObject obj) throws Exception {
 		ArrayList<String> latLongList = new ArrayList<String>();
